@@ -14,7 +14,7 @@
 
 Клонируем удалённый репозиторий на компьютер.
 
-Комманда: git clone <url> .
+Комманда: git clone.
 
 ![3](https://user-images.githubusercontent.com/87824002/200066364-b3024ffc-d22f-4f0e-91bb-c390dc83c0e5.jpg)
 
@@ -61,3 +61,46 @@
 Коммиты ветки branch1. Комманда: git log
 
 ![13](https://user-images.githubusercontent.com/87824002/200067167-84fcadbf-65a2-4d46-bdb5-58da882a1191.jpg)
+
+Подробно рассмотрим коммиты ветки branch1.
+Комманда: git log -p.
+
+![14](https://user-images.githubusercontent.com/87824002/200072434-de5c2176-6aa7-4ea4-9995-31af44b1796b.jpg)
+
+Возвращаемся обратно на ветку master.
+Команда: git checkout master.
+
+![15](https://user-images.githubusercontent.com/87824002/200072472-e6a645cd-19ba-443e-b85d-1766547776fc.jpg)
+
+Выполняем слияние ветки branch1 в ветку master.
+Комманда: git merge branch1.
+
+![16](https://user-images.githubusercontent.com/87824002/200072526-f52de670-b7c4-41dd-902f-22f5812243ed.jpg)
+
+Разрешаем возникший конфликт: в теории конфликт возник из-за того, что файл mergefile.txt не отслеживается. Проверив это и убедившись, добавляем файл для отслеживания, составляем коммит.
+Проверим, есть ли файлы, которые не отслеживаются. Команда: git status.
+
+![17](https://user-images.githubusercontent.com/87824002/200072560-383ba717-3039-478d-a3a6-538ee4109236.jpg)
+
+Добавим файл для отслеживания. Команда: git add mergefile.txt.
+
+![18](https://user-images.githubusercontent.com/87824002/200072602-1b55c7ea-c347-418a-8ba9-30a0b3dd5dc4.jpg)
+
+Проверим, что больше не осталось неотслеживаемых файлов. Команда: git status.
+
+![19](https://user-images.githubusercontent.com/87824002/200072629-869c6a28-9862-45b8-b9b8-801a8c602de3.jpg)
+
+Создаем коммит. Команда: git commit -m "merge conflict of branch1->master resolved".
+
+![20](https://user-images.githubusercontent.com/87824002/200072673-b1577387-ba7e-4b37-a578-245fd256e921.jpg)
+
+Пушим (отправляем) наши локальные изменения в удаленный репозиторий.
+Команды: git status; git push.
+
+![21](https://user-images.githubusercontent.com/87824002/200072705-439d5cfa-923e-4683-89e5-aec530742725.jpg)
+
+даляем (локально) побочную ветку после успешного слияния.
+Удаляем ветку branch1 локально. Команда: git branch -d branch1.
+
+![22](https://user-images.githubusercontent.com/87824002/200072765-2e794707-2e61-45c1-b668-597c8ebfecd6.jpg)
+
