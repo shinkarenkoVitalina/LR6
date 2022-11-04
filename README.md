@@ -142,7 +142,7 @@
   
 ![32](https://user-images.githubusercontent.com/87824002/200074320-013bf5bd-2cf7-4c81-8b96-053f19bdfea6.jpg)
 
-Скопируем id коммита и откатим его. Команда: git revert b37d5e4c839eb128f385dd1d74aaa2168648c422.
+Скопируем id коммита и откатим его. Команда: git revert.
   
 ![33](https://user-images.githubusercontent.com/87824002/200074376-274b77bf-92f9-4283-8a7d-d018e2b1b637.jpg)
 ![34](https://user-images.githubusercontent.com/87824002/200074406-558f2f66-ad3c-4837-8306-ec0f8feb5219.jpg)
