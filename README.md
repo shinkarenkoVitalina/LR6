@@ -98,9 +98,97 @@
 Команды: git status; git push.
 
 ![21](https://user-images.githubusercontent.com/87824002/200072705-439d5cfa-923e-4683-89e5-aec530742725.jpg)
-
-даляем (локально) побочную ветку после успешного слияния.
+![22](https://user-images.githubusercontent.com/87824002/200072765-2e794707-2e61-45c1-b668-597c8ebfecd6.jpg)
+  
+Удаляем (локально) побочную ветку после успешного слияния.
 Удаляем ветку branch1 локально. Команда: git branch -d branch1.
 
-![22](https://user-images.githubusercontent.com/87824002/200072765-2e794707-2e61-45c1-b668-597c8ebfecd6.jpg)
+![23](https://user-images.githubusercontent.com/87824002/200073601-d00f708c-b79c-407b-82d1-d078cef0f8b3.jpg)
 
+Проверяем, что локальная ветка удалена. Команда: git branch -a
+
+![24](https://user-images.githubusercontent.com/87824002/200073656-3acc75ed-de7b-4e3c-94a4-d8909e5e1191.jpg)
+
+ Добавляем (папку и файлы) изменения и фиксируем их (коммитим). Каждому изменения приписываем комментарий. Создаем папку и переходим в нее. Команды: mkdir changes; cd changes/.
+  
+![25](https://user-images.githubusercontent.com/87824002/200073844-fe74bb57-4bd8-41fe-8b55-679bbeef8b21.jpg)
+
+Создаем файл, соержащий в себе данные о папке. Команда: echo "package LR6.changes;" > package-info.java.
+  
+![26](https://user-images.githubusercontent.com/87824002/200073895-8a812195-a7f5-4556-96ab-250abe1314c6.jpg)
+
+Добавляем файл в отслеживаемые. Команда: git add package-info.java.
+
+![27](https://user-images.githubusercontent.com/87824002/200073986-3217dfd2-ed20-4f75-a3f5-ded132c39ddc.jpg)
+
+Создаем коммит. Команда: git commit -m "added new directory plus package-info".
+
+![28](https://user-images.githubusercontent.com/87824002/200074017-4944ad3b-a9c1-4f3c-ad6d-497a96c07a0b.jpg)
+
+Создаем пустой файл. Команда: echo "" > empty.txt.
+
+![29](https://user-images.githubusercontent.com/87824002/200074057-05639768-3fb0-4699-abef-c3b2ff07b5ce.jpg)
+
+Добавляем файл в отслеживаемые. Команда: git add empty.txt.
+
+![30](https://user-images.githubusercontent.com/87824002/200074263-c1afab1b-1b56-415a-ba9a-1b3232e88397.jpg)
+
+Создаем коммит. Команда: git commit -m "empty.txt added"
+
+![31](https://user-images.githubusercontent.com/87824002/200074288-f4fbf93b-2b23-4d8c-a465-92c884bfa76b.jpg)
+
+Сделаем откат последнего коммита.
+Найдем идентификатоор последнего коммита. Команда: git log.
+  
+![32](https://user-images.githubusercontent.com/87824002/200074320-013bf5bd-2cf7-4c81-8b96-053f19bdfea6.jpg)
+
+Скопируем id коммита и откатим его. Команда: git revert b37d5e4c839eb128f385dd1d74aaa2168648c422.
+  
+![33](https://user-images.githubusercontent.com/87824002/200074376-274b77bf-92f9-4283-8a7d-d018e2b1b637.jpg)
+![34](https://user-images.githubusercontent.com/87824002/200074406-558f2f66-ad3c-4837-8306-ec0f8feb5219.jpg)
+![35](https://user-images.githubusercontent.com/87824002/200074446-08a2f63c-7fcf-414c-a3c6-d59e0084f485.jpg)
+
+Отправим (запушим) коммиты в удаленный репозиторий.
+Проверка состояния контроля версий. Команда: git status.
+
+![36](https://user-images.githubusercontent.com/87824002/200074523-45c4e97a-ec64-4482-9a70-f9c2413d9750.jpg)
+
+Отправка коммитов. Команда: git push.
+
+![37](https://user-images.githubusercontent.com/87824002/200074547-fea560df-f00e-4206-9032-f4fb6d473d2b.jpg)
+
+Проверяем, что все запушили. Команда: git status.
+  
+![38](https://user-images.githubusercontent.com/87824002/200074570-3522df80-e200-4da7-885c-4c97dc732d12.jpg)
+
+Создаем ветку для отчёта.
+Создаем ветку report. Комманда: git branch report.
+
+![39](https://user-images.githubusercontent.com/87824002/200074741-e5ab4ba2-321c-4c1b-a871-8791c0fa31ae.jpg)
+
+Переходим на ветку report. Команда: git checkout report.
+
+![40](https://user-images.githubusercontent.com/87824002/200074812-b2358911-0814-4b23-b950-1915880d1a36.jpg)
+
+Создаем пустой файл отчета — README.md. Команда: echo "" > READEME.md.
+
+![41](https://user-images.githubusercontent.com/87824002/200074827-c6df9452-5a19-4469-806c-a49b36b5e95e.jpg)
+
+Добавляем отчет в систему контроля версий. Команда: git add README.md.
+
+![42](https://user-images.githubusercontent.com/87824002/200074844-7bd03f3a-7c1d-455e-a20a-8a283c22dabf.jpg)
+
+Создаем коммит с пустым отчетом. Команда: git commit -m "added README.md empty report".
+
+![43](https://user-images.githubusercontent.com/87824002/200074866-6203eea7-4819-439d-962a-b1f43bf1b734.jpg)
+
+Получаем итоговую историю операций в форматированном виде (сокращённый хэш - дата, имя автора : комментарий).
+Комманда: git log --pretty=format:"%h - %ar, %an : %s".
+
+![44](https://user-images.githubusercontent.com/87824002/200074950-06716f39-4c1d-4bab-a410-1077520a974b.jpg)
+
+Оформляем отчёт в файле README.md. 
+После редактирования отчета, его нужно будет сохранить и закоммитить git commit.
+В конце работы необходимо будет запушить все локальные изменения в сетевое хранилище GitHub командой git push.
+
+Все снимки экрана, используемые в этом отчете находятся в папке img.
