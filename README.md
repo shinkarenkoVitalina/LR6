@@ -1,10 +1,12 @@
 # LR6
-Лабораторная работа №6
+#Лабораторная работа №6
 
 Певым шагом мы создаем копию репозитория https://github.com/Kurtyanik/LR6/ в личном хранилище. 
+
 ![1](https://user-images.githubusercontent.com/87824002/200065624-f956e2eb-c260-442a-8209-e93db56d0b59.jpg)
 Затем настраиваем клиент git, вводим имя пользователя и email.
 Комманды: git config --global user.name <username>; git config --global user.email <email>.
+
 ![2](https://user-images.githubusercontent.com/87824002/200066054-6b4c2f74-fe27-471a-a336-451b1215076f.jpg)
 Клонируем удалённый репозиторий на компьютер.
 Комманда: git clone <url>.
