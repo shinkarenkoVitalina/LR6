@@ -14,7 +14,7 @@
 
 Клонируем удалённый репозиторий на компьютер.
 
-Комманда: git clone <url>.
+Комманда: git clone <url> .
 
 ![3](https://user-images.githubusercontent.com/87824002/200066364-b3024ffc-d22f-4f0e-91bb-c390dc83c0e5.jpg)
 
